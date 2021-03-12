@@ -1,3 +1,6 @@
 Each filename represents the size of the corresponding instance. The names are in the format n_d_s, where n is the number of vertices, d is the density of the graph, and s is the seed used by the algorithm that created these instances.
 
 Each instance is an eulerian graph. There are two numbers n (number of vertices) and m (number of edges) in the first line. The vertices are labeled from 0 to n-1. The following m lines contain two numbers u and v each, which indicates the existence of an edge (u,v).
+
+The instance generator requires 3 parameters. The first parameter must be an integer value, which is the number of vertices of the instance that will be generated. The second parameter also needs an integer value, which is the seed for the random number generator. The third parameter must be a real value between 0 and 1, indicating the density of the instance that will be generated, where 0 indicates a graph with no edges and 1 indicates a complete graph. For the resulting graph to be connected, the number of edges must be greater than or equal to the number of vertices, regardless of the reported density. Use the generator as follows:
+./eulerian_graph_dense [number of vertices] [random seed] [density]
